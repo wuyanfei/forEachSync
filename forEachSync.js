@@ -13,9 +13,9 @@ var worker = function(array,callback,compliteCallBack){
       callback(item,index,cback);
     }); 
   },1);
-  array.forEach(function(item){
-    q.push(item,function(){});
-  });
+  for(var i=0;i<array.length;i++){
+    q.push(array[i],function(){});
+  }
   q.drain = function(){
     compliteCallBack();
   };
