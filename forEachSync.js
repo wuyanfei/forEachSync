@@ -10,11 +10,11 @@ var worker = function(array,callback,compliteCallBack){
       cb(); 
     };
     process.nextTick(function(){
-      callback(item,index,cback);
+      callback(item.item,index,cback);
     }); 
   },1);
   for(var i=0;i<array.length;i++){
-    q.push(array[i],function(){});
+    q.push({'item':array[i]},function(){});
   }
   q.drain = function(){
     compliteCallBack();
