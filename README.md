@@ -1,7 +1,7 @@
 forEachSync
 ===========
 
-带游标的数组同步forEach
+带游标的数组同步forEach,执行完一个才会执行下一个。
 
 Examples:
 
